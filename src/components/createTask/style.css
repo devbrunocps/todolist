@@ -1,0 +1,33 @@
+.create-task {
+    display: flex;
+    align-items: center;
+    margin: 4vh 0;
+    box-shadow: 0px 0px 8px 3px rgb(29, 29, 29);
+    border-radius: 15px;
+}
+
+.create-task input {
+    width: 30vw;
+    height: 8vh;
+    outline: none;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.create-task button {
+    width: 4vw;
+    height: 8vh;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    background-color: #3d67f0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6rem;
+    cursor: pointer;
+}

@@ -1,0 +1,253 @@
+body::-webkit-scrollbar {
+    width: 1vw;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1d1d1d;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #3d67f0;
+    border-radius: 10px;
+    border: 4px solid #1d1d1d;
+}
+
+body {
+    background-color: #292929;
+    overflow-x: hidden;
+}
+
+
+.container .modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.815);
+    display: none;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.container .modal .menu {
+    position: relative;
+    width: 25%;
+    height: 20%;
+    background-color: #292929;
+    box-shadow: 0px 0px 10px 2px #3d67f08e;
+    border-radius: 1rem;
+    margin: 5vh;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    animation: slideIn 0.7s cubic-bezier(0.16, 0.16, 0.16, 0.16) both;
+    color: #fff;
+}
+
+.container .modal #menu-delete {
+    position: relative;
+    width: 40%;
+    height: 20%;
+    background-color: #292929;
+    box-shadow: 0px 0px 10px 2px #3d67f08e;
+    border-radius: 1rem;
+    margin: 5vh;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideIn 0.7s cubic-bezier(0.16, 0.16, 0.16, 0.16) both;
+    color: #fff;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-8rem);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-4rem);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container .modal #menu-delete .confirm {
+    font-size: 1.2rem;
+}
+
+.container .modal #menu-delete .btns {
+    display: flex;
+    width: 50%;
+    gap: 2rem;
+}
+
+.container .modal #menu-delete .btns button {
+    width: 60%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #3d67f0;
+    border-radius: 0.5rem;
+    transition: 0.4s;
+    color: #c4c4c4;
+    font-size: 1rem;
+}
+
+.container .modal #menu-delete .btns button:hover { 
+    cursor: pointer;
+    background-color: #3d67f0;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.container .modal .menu #cancel-modal {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.container .modal .menu #cancel-modal:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.container .modal .menu input {
+    width: 60%;
+    height: 30%;
+    background-color: #353535;
+    border: 2px solid #353535;
+    border: none;
+    color: white;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.container .modal .menu input:focus {
+    border: 2px solid #3d67f0;
+    outline: none;
+}
+
+.container .modal .menu input::placeholder {
+    color: #c4c4c4;
+}
+
+.container .modal .menu button {
+    width: 22%;
+    height: 30%;
+    background-color: transparent;
+    border: 2px solid #3d67f0;
+    border-radius: 0.5rem;
+    transition: 0.4s;
+    color: #c4c4c4;
+    font-size: 1rem;
+}
+
+.container .modal .menu button:hover {
+    cursor: pointer;
+    background-color: #3d67f0;
+    color: #fff;
+    transition: 0.4s;
+}
+
+
+.container .content-lists .icons {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0.8vw;
+    top: 14%;
+    gap: 1rem;
+}
+
+.container .content-lists .icons .close-list {
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.container .content-lists .icons .delete-list {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.container .content-lists {
+    width: 100%;
+    height: 88%;
+    margin-top: 4vh;
+    gap: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container .content-lists .name-list {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.container .content-lists .checks {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.container .click-to-top {
+    display: none;
+    position: fixed;
+    bottom: 3vh;
+    right: 2vw;
+    transition: 0.5s;
+}
+
+.container .click-to-top:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.container .click-to-top .btn-to-top {
+    background-color: #1d1d1d;
+    display: flex;
+    border-radius: 0.3rem;
+    animation: showTop 0.5s cubic-bezier(0.15, 0.16, 0.15, 0.14) both;
+}
+
+@keyframes showTop {
+    0% {
+        transform: translateY(8rem);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(4rem);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.container .click-to-top .btn-to-top #icon-to-top {
+    color: #fff;
+    font-size: 2.3rem;
+}

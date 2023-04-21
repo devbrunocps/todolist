@@ -1,0 +1,45 @@
+li {
+    min-height: 10vh;
+    display: flex;
+    line-height: 4.5vh;
+    gap: 5vw;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    border-bottom: 2px solid #3d67f0;
+}
+
+li .checkbox {
+    display: flex;
+    width: 5vw;
+    justify-content: flex-start;
+}
+
+li .checkbox .check {
+    min-width: 20px;
+    min-height: 20px;
+}
+
+li .task {
+    text-align: center;
+    width: 25vw;
+    background-color: transparent;
+    outline: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px;
+}
+
+li .actions {
+    display: flex;
+    gap: 1rem;
+    width: 5vw;
+    justify-content: flex-end;
+}
+
+li .actions .delete i, li .actions .change i {
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+}

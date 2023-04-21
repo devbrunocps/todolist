@@ -1,0 +1,13 @@
+.container #title {
+    width: 100%;
+    height: 12%;
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .title span {
+    color: #fff;
+    font-size: 1.8rem;
+}
