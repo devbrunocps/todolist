@@ -52,16 +52,21 @@ export class Functions {
         let input = document.getElementById("name-list")
         let nameList = input.value.toLowerCase()
         if (input.value.length > 0) {
+            let listExist = lists.filter(el => el.name === nameList)
 
-            let newList = {
-                name: nameList,
-                tasks: []
+            if (listExist.length === 0) {
+                let newList = {
+                    name: nameList,
+                    tasks: []
+                }
+
+                lists.unshift(newList)
+                setLists()
+                countTasksDone()
+                window.location.href = "/lists"
+            } else {
+                alert("JÁ EXISTE UMA LISTA COM ESSE NOME")
             }
-
-            lists.unshift(newList)
-            setLists()
-            countTasksDone()
-            window.location.href = "/lists"
         } else {
             alert("DIGITE UM NOME PARA A LISTA")
         }
@@ -273,9 +278,9 @@ export class Functions {
 
     static checkScroll() {
         let scroll = window.scrollY
-        if(scroll > 0) {
+        if (scroll > 0) {
             document.getElementById('click-to-top').style.display = "flex"
-        } else if(scroll == 0) {
+        } else if (scroll == 0) {
             document.getElementById('click-to-top').style.display = "none"
         }
     }
