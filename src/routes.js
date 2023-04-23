@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Main from "../src/components/main";
-import Lists from "../src/components/lists";
+import Main from "./components/main";
+import Lists from "./components/lists";
 
 let Router = () =>  (
     <BrowserRouter> 
